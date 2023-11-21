@@ -27,6 +27,7 @@ const burguers = [
 
 const FoodSection = () => {
     return (
+        <>
         <section className='foodSection'>
             <h2>Our most popular burguers</h2>
             <div className='foodSectionCards'>
@@ -35,6 +36,15 @@ const FoodSection = () => {
                 })}
             </div>
         </section>
+        <section className='foodSection'>
+            <h2>Our most popular burguers</h2>
+            <div className='foodSectionCards'>
+                {burguers.map((burguer) => {
+                    return <Card name={burguer.name} description={burguer.description} img={burguer.img} />
+                })}
+            </div>
+        </section>
+        </>
     );
 };
 

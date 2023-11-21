@@ -1,13 +1,11 @@
 import './App.css';
-import Card from './components/Card/Card.jsx'
 import FoodSection from './components/FoodSection/FoodSection.jsx';
+import Header from './components/Header/Header.jsx';
 
 function App() {
   return (
     <>
-      <p className="read-the-docs">
-        Aquí van las comidas
-      </p>
+      <Header />
       <FoodSection  />
     </>
   )
