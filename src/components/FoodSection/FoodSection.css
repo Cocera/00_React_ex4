@@ -1,8 +1,17 @@
-/* section.foodSection {} */
+section.foodSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 3vw;
+}
 
 .foodSectionCards {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    gap: 10px 20px;
+    gap: 10px 30px;
+}
+
+.foodSection>h2 {
+    padding-bottom: 2vw;
 }
