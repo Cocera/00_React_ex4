@@ -28,14 +28,14 @@ const burguers = [
 const burguers2 = [
   {
     id:4,
-    name:'Cheeeeese Sandwich',
+    name:'Cheese Sandwich',
     description:'Literally, a basic sandwich with loooot of melted cheese.',
     img: 'https://cn-geo1.uber.com/image-proc/resize/eats/format=webp/width=550/height=440/quality=70/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC9pbWFnZS1wcm9jL3Byb2Nlc3NlZF9pbWFnZXMvYjVkMjhlZDQzNmExMTVhZjJlOGE4NWU3MjNlNzExMDYvYTE5YmIwOTY5MjMxMGRmZDQxZTQ5YTk2YzQyNGIzYTYuanBlZw==',
     price:10
   },
   {
     id:5,
-    name:'Lettuce Burger V',
+    name:'Lettuce Burger',
     description:'Just bread and lettuce. Very original recipeand best option for vegans.',
     img: 'https://cn-geo1.uber.com/image-proc/resize/eats/format=webp/width=550/height=440/quality=70/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC9pbWFnZS1wcm9jL3Byb2Nlc3NlZF9pbWFnZXMvZDhkMzY2ZWE5ZTgxODYyODk5NWU3NzZkNDAzYmI3ODYvYTE5YmIwOTY5MjMxMGRmZDQxZTQ5YTk2YzQyNGIzYTYuanBlZw==',
     price:20
