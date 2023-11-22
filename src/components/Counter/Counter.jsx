@@ -12,11 +12,9 @@ const Counter = (props) => {
         if (counter > 0) {
             setCounter(counter -1);
         } else {
-            alert('¡El contador está en 0!')
+            alert('Counter is in 0!')
         }
     };
-
-    console.log(counter)
 
     return (
     <div className="counterCont">
