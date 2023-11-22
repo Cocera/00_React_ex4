@@ -1,0 +1,41 @@
+form {
+    padding: 50px 200px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: space-around;
+    gap: 10px 20px;
+}
+
+.formButtons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 20px;
+    margin-top: 20PX;
+}
+
+.formButtons>button {
+    width: 40%;
+}
+
+form>input,textarea {
+    width: 40%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid rgb(114, 114, 114);
+    border-radius: 100px;
+    box-shadow: 0 0 5px 0px rgba(213, 213, 213, 0.3),
+ 	-2px 9px 20px 0px rgba(213, 213, 213, 0.3);
+}
+
+textarea{
+    border-radius: 15px;
+}
+
+form>h2 {
+    text-align: center;
+}

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './ReservationForm.css';
 
 const arrInfoReservations = [];
 
@@ -36,6 +37,7 @@ export const ReservationForm = () => {
     return(
         <>
             <form>
+                <h2>Reserve a table with us!</h2>
                 <input
                     type="text"
                     placeholder="name"
@@ -64,9 +66,12 @@ export const ReservationForm = () => {
                     name="date"
                     value={data.date}
                 />
-                <textarea rows="5" name="comment" value={data.comment} onChange={handleInputChange}>Reservation comment</textarea>
-                <button type="submit" onClick={handleSubmit}>Enviar</button>
-                <button type="delete" onClick={clearForm}>Delete</button>
+                <label htmlFor="comment">Write a comment for your reservation:</label>
+                <textarea rows="4" name="comment" value={data.comment} onChange={handleInputChange} />
+                <div className="formButtons">
+                    <button type="submit" onClick={handleSubmit}>Send</button>
+                    <button type="delete" onClick={clearForm}>Delete</button>
+                </div>
             </form>
         </>
     );
