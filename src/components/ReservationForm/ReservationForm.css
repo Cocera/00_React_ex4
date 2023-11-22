@@ -27,13 +27,9 @@ form>input,textarea {
     padding: 10px;
     box-sizing: border-box;
     border: 1px solid rgb(114, 114, 114);
-    border-radius: 100px;
+    border-radius: 5px;
     box-shadow: 0 0 5px 0px rgba(213, 213, 213, 0.3),
  	-2px 9px 20px 0px rgba(213, 213, 213, 0.3);
-}
-
-textarea{
-    border-radius: 15px;
 }
 
 form>h2 {
