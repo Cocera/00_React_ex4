@@ -1,15 +1,23 @@
 import React, { useState } from "react";
 
-export const ReservationForm = () => {
+const arrInfoReservations = [];
 
+export const ReservationForm = () => {
+    
     const initialValue = {
         name: "",
-        email: ""
+        email: "",
+        tlf: "",
+        date: "",
+        comment: ""
     };
 
     const [data, setData] = useState(initialValue);
 
-    const clearForm = () => setData(initialValue);
+    const clearForm = (e) => {
+        e.preventDefault();
+        setData(initialValue)
+    };
 
     const handleInputChange = (e) => {
         setData({
@@ -20,32 +28,45 @@ export const ReservationForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
-        // Test sending data function
-        console.log(`Mi nombre es ${data.name} y mi mail ${data.email}`);
-
-        clearForm();
+        arrInfoReservations.push({...data, id_reservation: crypto.randomUUID()});
+        localStorage.setItem('dataForm', JSON.stringify(arrInfoReservations));
+        setData(initialValue);
     };
 
     return(
         <>
-            <form onSubmit={handleSubmit}>
-            <input
-                type="text"
-                placeholder="name"
-                onChange={handleInputChange}
-                name="name"
-                value={data.name}
-            />
-            <input
-                type="email"
-                placeholder="email"
-                onChange={handleInputChange}
-                name="email"
-                value={data.email}
-            />
-            <button type="submit">Enviar</button>
-            <button type="delete" onClick={() => clearForm}>Enviar</button>
+            <form>
+                <input
+                    type="text"
+                    placeholder="name"
+                    onChange={handleInputChange}
+                    name="name"
+                    value={data.name}
+                />
+                <input
+                    type="email"
+                    placeholder="email"
+                    onChange={handleInputChange}
+                    name="email"
+                    value={data.email}
+                />
+                <input
+                    type="tel"
+                    placeholder="tlf."
+                    onChange={handleInputChange}
+                    name="tlf"
+                    value={data.tlf}
+                />
+                <input
+                    type="datetime-local"
+                    placeholder="date"
+                    onChange={handleInputChange}
+                    name="date"
+                    value={data.date}
+                />
+                <textarea rows="5" name="comment" value={data.comment} onChange={handleInputChange}>Reservation comment</textarea>
+                <button type="submit" onClick={handleSubmit}>Enviar</button>
+                <button type="delete" onClick={clearForm}>Delete</button>
             </form>
         </>
     );
