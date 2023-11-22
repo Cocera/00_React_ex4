@@ -32,6 +32,10 @@ form>input,textarea {
  	-2px 9px 20px 0px rgba(213, 213, 213, 0.3);
 }
 
+form>textarea {
+    resize: none
+}
+
 form>h2 {
     text-align: center;
 }
