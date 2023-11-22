@@ -6,6 +6,22 @@ article.card {
     padding: 0;
     width: 250px;
     height: 370px;
+    position: relative;
+}
+
+div.stickerPrice {
+    border-radius: 100%;
+    position: absolute;
+    top: 160px; left: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 5px 0px rgba(213, 213, 213, 0.5),
+ 	-2px 9px 20px 0px rgba(213, 213, 213, 0.5);
+    font-size: small;
 }
 
 div.cardImgCont {

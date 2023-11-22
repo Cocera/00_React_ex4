@@ -4,6 +4,7 @@ import Counter from '../Counter/Counter.jsx'
 const Card = (props) => {
     return (
     <article className="card">
+        <div className='stickerPrice'>{props.price}€</div>
         <div className="cardImgCont">
             <img src={props.img}/>
         </div>
