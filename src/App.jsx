@@ -1,5 +1,6 @@
 import './App.css';
-import FoodSection from './components/FoodSection/FoodSection.jsx';
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import Home from './components/Home/Home.jsx';
 import Header from './components/Header/Header.jsx';
 import ReservationForm from './components/ReservationForm/ReservationForm.jsx';
 
@@ -53,12 +54,17 @@ const burguers2 = [
 function App() {
   return (
     <>
+    <Router>
       <Header />
-      <ReservationForm />
-      <div className='contFoodSection'>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/reservationForm" element={<ReservationForm />} />
+      </Routes>
+      {/* <div className='contFoodSection'>
         <FoodSection id={crypto.randomUUID()} sectionTitle="Most popular burguers" menuObject={burguers}/>
         <FoodSection id={crypto.randomUUID()} sectionTitle="Our burguer menus" menuObject={burguers2}/>
-      </div>
+      </div> */}
+    </Router>
     </>
   )
 }
