@@ -1,5 +1,5 @@
 import './Home.css'
-import FoodSection from './components/FoodSection/FoodSection.jsx';
+import FoodSection from './FoodSection/FoodSection.jsx';
 
 const burguers = [
     {
